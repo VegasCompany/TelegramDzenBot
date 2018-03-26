@@ -58,8 +58,9 @@ class Bot_Dzen:
         self.state(respons)
     def parse(self):
         
-        url_parse = self.url.split("/")[6]
-        new_parse = url_parse.split('-')[-1]
+        url_parse = self.url
+        new_parse = url_parse[-24:]
+        print(new_parse)
 
         self.json_url(new_parse)
 # Define a few command handlers. These usually take the two arguments bot and
@@ -96,7 +97,7 @@ def error(bot, update, error):
 def main():
     """Start the bot."""
     # Create the EventHandler and pass it your bot's token.
-    updater = Updater("557212771:AAFzlAjPIOTfRAqsuizHfs_moDSALeVMfvE")
+    updater = Updater("532247434:AAEYKZ8bNmMIqQB7HRz1xkYrv-dQ_33RpPs")
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
